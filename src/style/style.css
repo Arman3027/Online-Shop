@@ -76,18 +76,45 @@ body{
     bottom: 30px;
 }
 
-@media screen and (max-width : 730px){
+@media screen and (max-width : 700px){
     body{
         font-size: 18px;
     }
     .navigat p {
         display: none;
     }
-    .navigat{
+    .ul-nav{
         justify-content: center;
     }
     .li-nav{
-        font-size: 1.6em;
+        font-size: 1.7em;
+        margin-left: unset;
+        margin: 0px 15px;
+        text-align: center;
+    }
+.link-nav{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+@media screen and (max-width : 450px){
+    body{
+        font-size: 10px;
+    }
+    .navigat p {
+        display: none;
+    }
+    .ul-nav{
+        justify-content: center;
+    }
+    .li-nav{
+        font-size: 1.8em;
+        margin-left: unset;
+        margin: 0px 10px;
+        text-align: center;
     }
 .link-nav{
     height: 100%;
