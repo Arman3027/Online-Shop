@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&family=Pacifico&family=Poppins&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    font-size: 20px;
+    font-family: 'popins', cursive;;
+}
+.navigat{
+    width: 100%;
+    height: 70px;
+    background-color: #1995AD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ul-nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.li-nav{
+    color: #F1F1F2;
+    margin: auto;
+    font-size: 1.4em;
+    list-style-type: none;
+    margin-left: 25px;
+    display: block;
+}
+.navigat p{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: auto ;
+    font-size: 2.4em;
+    color: #F1F1F2;
+    cursor: default;
+    font-family: 'Merienda', cursive;
+}
+.container-home{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #F1F1F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-home{
+    width: auto;
+    height: auto;
+    font-size: 2.5em;
+    color: #87d8ea;
+    font-family: 'Pacifico', cursive;
+}
+.onlineshop-home{
+    font-size: 4em;
+    color: #87d8ea;
+    width: auto;
+    height: auto;
+    margin-bottom: 100px;
+    font-family: 'Pacifico', cursive;
+}
+.me-home{
+    position: absolute;
+    font-size: 1.5em;
+    color: #87d8ea;
+    width: auto;
+    height: auto;
+    font-family: 'Pacifico', cursive;
+    bottom: 30px;
+}
+
+@media screen and (max-width : 730px){
+    body{
+        font-size: 18px;
+    }
+    .navigat p {
+        display: none;
+    }
+    .navigat{
+        justify-content: center;
+    }
+    .li-nav{
+        font-size: 1.6em;
+    }
+.link-nav{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
