@@ -6,6 +6,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { useContext } from "react";
 import ProductContext from "../context/context";
+import { Link } from "react-router-dom";
 
 
 const Products = () => {
@@ -98,7 +99,9 @@ const Products = () => {
             return (
               <>
                 <div className="item-products" key={index}>
-                  <img src={product.image} className="img-products" />
+                  <Link to={`/products/${product.id}`}>
+                    <img src={product.image} className="img-products" />
+                  </Link>
                   <p className="price-products">{product.price}$</p>
                   <p className="title-products">{product.title}</p>
                   <div
@@ -149,18 +152,13 @@ const Products = () => {
     productcontext.onmines();
   }
   function handlesubmit(product,target) {
-    productcontext.onsubmit(buy_products, cart_products, product,target);
-    handletotal()
+    productcontext.onsubmit(product,target);
   }
   function handleactive() {
     productcontext.onclick()
   }
   function handledelete(item) {
     productcontext.ondelete(item)
-    handletotal()
-  }
-  function handletotal() {
-    productcontext.ontotal()
   }
   function handlechange(value ,select) {
     productcontext.onchange(value,select)

@@ -272,6 +272,118 @@ body {
   color: #f1f1f2;
 }
 
+.container-single{
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f1f1f2;
+}
+.flex-single{
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f1f1f2;
+}
+.back-single{
+  position: absolute;
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #1995ad;
+  top: 90px;
+  left: 20px;
+  color: #f1f1f2;
+  border: 0;
+}
+.img-single{
+  width: 30%;
+  height: auto;
+  margin: auto;
+  border: 10px #1995ad solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+.info-single{
+  background-color: #1995ad;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.title-single{
+  margin-bottom: 10px;
+}
+.price-single{
+  margin-bottom: 10px;
+}
+.description-single{
+  margin-bottom: 10px;
+}
+.cart-single{
+  width: 250px;
+  height: 50px;
+  margin: 40px;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 5px #1995ad solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+.submit-single{
+  width: 40%;
+  height: 100%;
+  background-color: #1995ad;
+  border-radius: 4px;
+  border: 0;
+  margin: 4px;
+  font-size: 1.001em;
+}
+.count-single{
+  margin: 4px;
+}
+.plus-single{
+  width: 20%;
+  height: 100%;
+  background-color: #1995ad;
+  border-radius: 4px;
+  border: 0;
+  margin: 4px;
+  font-size: 1.001em;
+}
+.mines-single{
+  width: 20%;
+  height: 100%;
+  background-color: #1995ad;
+  border-radius: 4px;
+  border: 0;
+  margin: 4px;
+  font-size: 1.001em;
+}
+.buy-single{
+  font-size: 1.4em;
+  width: 250px;
+  height: 50px;
+  background-color: #1995ad;
+  margin: 40px;
+  border-radius: 4px;
+  border: 0;
+}
+
+
+
+
+
 @media screen and (max-width: 1120px) {
   .buy-products{
     display: unset;
@@ -460,6 +572,15 @@ body {
   background-color: #87d8ea;
   border-radius: 5px;
 }
+.img-single{
+  width: 50%;
+  height: auto;
+  margin: auto;
+  border: 10px #1995ad solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
 }
 @media  screen and (max-width: 500px) {
   body{
@@ -538,6 +659,18 @@ body {
   background-color: #f1f1f2;
   padding: 150px 65px;
 }
+.title-single{
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+.price-single{
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+.description-single{
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
 }
 
 @media  screen and (max-width: 400px) {
@@ -572,7 +705,7 @@ body {
   height: 35px;
   top: 20px;
   left: 90px;
-  font-size: 0.9em;
+  font-size: 1em;
   outline: none;
   border: 2px #1995ad solid;
   background-color: #87d8ea;
@@ -616,6 +749,77 @@ body {
   height: calc(100% - 70px);
   background-color: #f1f1f2;
   padding: 150px 40px;
+}
+.img-single{
+  width: 70%;
+  height: auto;
+  margin: auto;
+  border: 5px #1995ad solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+.back-single{
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #1995ad;
+  top: 90px;
+  left: 10px;
+  color: #f1f1f2;
+  border: 0;
+}
+.cart-single{
+  width: 200px;
+  height: 50px;
+  margin: 40px;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 5px #1995ad solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+.submit-single{
+  width: 40%;
+  height: 100%;
+  background-color: #1995ad;
+  border-radius: 4px;
+  border: 0;
+  margin: 4px;
+  font-size: 1.001em;
+}
+.count-single{
+  margin: 4px;
+}
+.plus-single{
+  width: 20%;
+  height: 100%;
+  background-color: #1995ad;
+  border-radius: 4px;
+  border: 0;
+  margin: 4px;
+  font-size: 1.001em;
+}
+.mines-single{
+  width: 20%;
+  height: 100%;
+  background-color: #1995ad;
+  border-radius: 4px;
+  border: 0;
+  margin: 4px;
+  font-size: 1.001em;
+}
+.buy-single{
+  font-size: 1.4em;
+  width: 200px;
+  height: 50px;
+  background-color: #1995ad;
+  margin: 40px;
+  border-radius: 4px;
+  border: 0;
 }
 }
 

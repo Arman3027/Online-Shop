@@ -8,6 +8,7 @@ import Login from "./component/login";
 import Home from "./component/home";
 import "./style/style.css";
 import axios from "axios";
+import Singleproduct from "./component/singleproduct";
 
 const App = () => {
   const [itemProducts, setProducts] = useState([]);
@@ -32,11 +33,11 @@ const App = () => {
         value={{
           itemProducts: itemProducts,
           onbuy: handlebuy,
+          onbuysingle:handlebuysingle,
           onplus: handleplus,
           onmines: handlemines,
           onsubmit: handlesubmit,
           onclick: handleactive,
-          ontotal: handletotal,
           ondelete: handledelete,
           onchange: handlechange,
           ongroup: handlegroup,
@@ -50,6 +51,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<Singleproduct />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/not-found" element={<h1>not found ¯\_ (¬_¬)_/¯</h1>} />
@@ -76,6 +78,12 @@ const App = () => {
     brother.style.display = 'flex'
     setcount(0);
   }
+  function handlebuysingle(buy_single, cart_single, user, target) {
+    let brother = target.parentElement.childNodes[3]
+    target.style.display = "none";
+    brother.style.display = "flex";
+    setcount(0)
+  }
   function handleplus() {
     let newcount = countitem + 1
     setcount(newcount)
@@ -88,21 +96,29 @@ const App = () => {
       return countitem;
     }
   }
-  function handlesubmit(buy_products, cart_procuts, product,target) {
-    let index = product.id - 1;
+  function handlesubmit(product,target) {
     let brother = target.parentElement.parentElement.childNodes[4]
     brother.style.display = "unset";
     target.parentElement.style.display = "none";
 
-    let item = {
-      title: product.title,
-      count: countitem,
-      price: product.price,
-      allprice: product.price * countitem,
-    }
+    let item = 
+      {
+        title: product.title,
+        count: countitem,
+        price: product.price,
+        allprice: product.price * countitem,
+      }
+  
     if (item.allprice !== 0) {
-      cartitem.push(item)
-      setcartitem(cartitem)
+      let another = [...cartitem]
+      another.push(item)
+      console.log(another);
+      setcartitem(another)
+    let newtotal = 0;
+    for (const x of another) {
+      newtotal += x.allprice;
+    }
+    settotal(newtotal);
     }
     setcount(0)
   }
@@ -114,18 +130,17 @@ const App = () => {
     }
   }
   function handledelete(item) {
+    let another=[...cartitem]
     let index = cartitem.indexOf(item)
-    if (index > -1) {
-      cartitem.splice(index , 1)
+    another.splice(index, 1)
+    ///?????????????????????????????????????????????????
+      console.log(another);
+    setcartitem(another)
+    let newtotal = 0;
+    for (const x of another) {
+      newtotal += x.allprice;
     }
-    setcartitem(cartitem)
-  }
-  function handletotal() {
-    let newtotal=0
-    cartitem.forEach((item) => {
-      newtotal += item.allprice;
-    })
-    settotal(newtotal)
+    settotal(newtotal);
   }
   function handlechange(value, select) {
     let newfilteritem;
