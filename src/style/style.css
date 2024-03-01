@@ -450,10 +450,31 @@ body {
   background-color: #116272;
   color: #f1f1f2;
 }
+.container-about{
+  height: calc(100vh - 70px);
+  width: 100%;
+  background-color: #f1f1f2;
+  font-family: "Merienda", cursive;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+.flex-about{
+  width: 30%;
+  height: 40%;
+  border-radius: 10px;
+  background-color: #1995ad;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-about p{
+  color: #f1f1f2;
+}
 
 
-
-
+/* ****************************************************** responsive ******************************************************** */
 
 @media screen and (max-width: 1120px) {
   .buy-products{
@@ -504,6 +525,16 @@ body {
   row-gap: 60px;
   column-gap: 30px;
   }
+.flex-about{
+  width: 45%;
+  height: 40%;
+  border-radius: 10px;
+  background-color: #1995ad;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 }
 @media screen and (max-width: 850px) {
   .faCircle-products{
@@ -576,6 +607,16 @@ body {
   background-color: #87d8ea;
   border-radius: 5px;
 }
+.flex-about{
+  width: 55%;
+  height: 40%;
+  border-radius: 10px;
+  background-color: #1995ad;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 }
 
 @media screen and (max-width: 650px) {
@@ -597,6 +638,16 @@ body {
   grid-template-rows: repeat(20, 400px);
   row-gap: 40px;
   }
+.flex-about{
+  width: 70%;
+  height: 40%;
+  border-radius: 10px;
+  background-color: #1995ad;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 }
 @media screen and (max-width: 720px) {
   body {
@@ -697,6 +748,16 @@ body {
   padding: 2px;
   border: none;
   outline: none;
+}
+.flex-about{
+  width: 60%;
+  height: 40%;
+  border-radius: 10px;
+  background-color: #1995ad;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 }
 @media  screen and (max-width: 500px) {
@@ -851,6 +912,20 @@ body {
   background-color: #87d8ea;
   padding: 3px;
   font-size: 1.2em;
+}
+.flex-about{
+  width: 75%;
+  height: 40%;
+  border-radius: 10px;
+  background-color: #1995ad;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-about p{
+  color: #f1f1f2;
+  font-size: 1.4em;
 }
 }
 
@@ -1065,6 +1140,20 @@ body {
   background-color: #87d8ea;
   padding: 3px;
   font-size: 1.2em;
+}
+.flex-about{
+  width: 90%;
+  height: 40%;
+  border-radius: 10px;
+  background-color: #1995ad;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-about p{
+  color: #f1f1f2;
+  font-size: 1.4em;
 }
 }
 
