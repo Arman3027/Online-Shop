@@ -1,5 +1,5 @@
 import "../style/style.css";
-import { NavLink } from "react-router-dom";
+import { NavLink , Link} from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -42,7 +42,9 @@ const Navbar = () => {
           <li className="li-nav">About</li>
         </NavLink>
       </ul>
-      <p>Online Shop</p>
+      <Link to="/">
+        <p>Online Shop</p>
+      </Link>
     </div>
   );
 };

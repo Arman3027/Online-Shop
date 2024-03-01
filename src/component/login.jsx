@@ -1,47 +1,54 @@
 import "../style/style.css";
-import {useFormik } from "formik";
-import * as yup from "yup"
+import { Field, FormikProvider, useFormik } from "formik";
+import * as Yup from "yup";
 
 const Login = () => {
   const formik = useFormik({
-    initialvalues: {
+    initialValues: {
       email: "",
-      password : ""
+      password: "",
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values))
+      alert(JSON.stringify(values));
     },
-    validationSchema: yup.object({
-      email: yup.string().email().required('please enter email address'),
-      password:yup.string().min(8,'your password should be more than 8 character').required('please enter password')
-    })
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email("enter your email")
+        .required("please enter email address"),
+      password: Yup.string()
+        .min(8, "your password should be more than 8 character")
+        .required("please enter password"),
+    }),
   });
-  
 
   return (
-    <>
-      <div className="container-login">
-        <div className="flex-login">
-          <form onSubmit={formik.handlesubmit}>
-            <label htmlFor="email">email</label>
-            <input type="email" id="email" {...formik.getfieldProps("email")} />
-            <label htmlFor="password">password</label>
-            <input
-              type="password"
-              id="password"
-              {...formik.getfieldprops("password")}
-            />
-            {formik.touched.email && formik.errors.email ? (
-              <div>{formik.errors.email}</div>
-            ) : null}
-            {formik.touched.password && formik.errors.password ? (
-              <div>{formik.errors.password}</div>
-            ) : null}
-            <button type="submit">submit</button>
-          </form>
+    <FormikProvider value={formik}>
+        <div className="container-login">
+          <div className="flex-login">
+            <form onSubmit={formik.handleSubmit} className="form-login">
+              <label className="label-login" htmlFor="email">email</label>
+              <Field
+                type="email"
+                id="email"
+                {...formik.getFieldProps("email")}
+              />
+              <label className="label-login" htmlFor="password">password</label>
+              <Field
+                type="password"
+                id="password"
+                {...formik.getFieldProps("password")}
+              />
+              <button type="submit" id="button-login">submit</button>
+              {formik.touched.email && formik.errors.email ? (
+                <div className="emailerror-login">{formik.errors.email}</div>
+              ) : null}
+              {formik.touched.password && formik.errors.password ? (
+                <div className="passworderror-login">{formik.errors.password}</div>
+              ) : null}
+            </form>
+          </div>
         </div>
-      </div>
-    </>
+    </FormikProvider>
   );
 };
 
