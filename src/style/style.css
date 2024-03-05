@@ -154,6 +154,12 @@ body {
   background-color: #1995ad;
   border: 0;
   border-radius: 5px;
+  box-shadow: 1px 1px 2px;
+  transition: all 0.1s ease;
+}
+.plus-products:hover{
+  background-color: #1989a0;
+  box-shadow: none;
 }
 .mines-products {
   width: 30px;
@@ -161,6 +167,12 @@ body {
   background-color: #1995ad;
   border: 0;
   border-radius: 5px;
+  box-shadow: 1px 1px 2px;
+  transition: all 0.1s ease;
+}
+.mines-products:hover{
+  background-color: #1989a0;
+  box-shadow: none;
 }
 .submit-products{
   width: 80px;
@@ -170,6 +182,12 @@ body {
   border-radius: 5px;
   margin-left: 10px;
   margin-right: 10px;
+  box-shadow: 1px 1px 2px ;
+  transition: all 0.1s ease;
+}
+.submit-products:hover{
+  background-color: #1989a0;
+  box-shadow: none;
 }
 .buy-products {
   display: unset;
@@ -179,6 +197,12 @@ body {
   border: 0;
   border-radius: 5px;
   font-size: 1em;
+  box-shadow: 1px 1px 2px ;
+  transition: all 0.1s ease;
+}
+.buy-products:hover{
+  background-color: #1989a0;
+  box-shadow: none
 }
 .faCart-products {
   position: absolute;
@@ -186,10 +210,16 @@ body {
   left: 50px;
   width: 35px;
   height: 35px;
-  font-size: 1.2em;
-  border: 2px #1995ad solid;
-  background-color: #87d8ea;
+  font-size: 1em;
+  background-color: #25adc9;
+  border: 3px #1995ad solid;
   border-radius: 4px;
+  padding: 2px;
+  color: #f1f1f2;
+  transition: all 0.1s ease;
+}
+.faCart-products:hover{
+  background-color: #1995ad;
 }
 .cartpage-products {
   position: fixed;
@@ -211,6 +241,10 @@ body {
   height: 22px;
   margin: 4px;
   color: #116272;
+  transition: all 0.1s ease;
+}
+.faCircle-products:hover{
+  color: #004350;
 }
 .infoinfo-products{
   width: 85%;
@@ -300,6 +334,10 @@ body {
   left: 20px;
   color: #f1f1f2;
   border: 0;
+  transition: all 0.4s ease;
+}
+.back-single:hover{
+  background-color: #1989a0;
 }
 .img-single{
   width: 30%;
@@ -348,6 +386,12 @@ body {
   border: 0;
   margin: 4px;
   font-size: 1.001em;
+  box-shadow: 1px 1px 3px;
+  transition: all 0.1s ease;
+}
+.submit-single:hover{
+  background-color: #1989a0;
+  box-shadow: none;
 }
 .count-single{
   margin: 4px;
@@ -360,6 +404,12 @@ body {
   border: 0;
   margin: 4px;
   font-size: 1.001em;
+  box-shadow: 1px 1px 3px;
+  transition: all 0.1s ease;
+}
+.plus-single:hover{
+  box-shadow: none;
+  background-color: #1989a0;
 }
 .mines-single{
   width: 20%;
@@ -369,6 +419,12 @@ body {
   border: 0;
   margin: 4px;
   font-size: 1.001em;
+  box-shadow: 1px 1px 3px;
+  transition: all 0.1s ease;
+}
+.mines-single:hover{
+  box-shadow: none;
+  background-color: #1989a0;
 }
 .buy-single{
   font-size: 1.4em;
@@ -378,6 +434,12 @@ body {
   margin: 40px;
   border-radius: 4px;
   border: 0;
+  box-shadow: 1px 1px 3px;
+  transition: all 0.5s ease;
+}
+.buy-single:hover{
+  box-shadow: none;
+  background-color: #1989a0;
 }
 .container-login{
   width: 100%;
@@ -418,7 +480,7 @@ body {
 .emailerror-login{
   margin: 5px;
   border-radius: 5px;
-  background-color: #87d8ea;
+  background-color: #ffd2d2;
   padding: 3px;
 }
 #password{
@@ -434,7 +496,7 @@ body {
 .passworderror-login{
   margin: 5px;
   border-radius: 5px;
-  background-color: #87d8ea;
+  background-color: #ffd2d2;
   padding: 3px;
 }
 .label-login{
@@ -444,11 +506,43 @@ body {
   margin: 15px;
   width: 150px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 4px;
   border: none;
   outline: none;
-  background-color: #116272;
+  background-color: #1995ad;
+  border: #00596b 2px solid;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  transition: all .5s ease;
+  z-index: 0;
+}
+#button-login:hover{
+  border-radius: 10px;
+}
+#button-login::before{
+  transform: scaleX(0);
+  transform-origin: right left;
+}
+#button-login:hover::before{
+  transform: scaleX(1);
+  transform-origin: bottom top; 
+}
+#button-login::before{
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #00596b;
+  transition: transform .5s ease;
+  z-index: 1;
+  border-radius: 3px;
+}
+#button-login span{
+  position: relative;
   color: #f1f1f2;
+  z-index: 2;
 }
 .container-about{
   height: calc(100vh - 70px);
